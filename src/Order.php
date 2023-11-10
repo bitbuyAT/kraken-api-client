@@ -1,93 +1,94 @@
 <?php
 
-namespace Butschster\Kraken;
+namespace bitbuyAT\Kraken;
 
-use Butschster\Kraken\Contracts\Order as OrderContract;
+use bitbuyAT\Kraken\Contracts\Order as OrderContract;
 use Carbon\Carbon;
 
 class Order implements OrderContract
 {
     /**
-     * Type of order (buy/sell)
+     * Type of order (buy/sell).
      *
      * @var string
      */
     protected $type;
 
     /**
-     * Order type
+     * Order type.
      *
      * @var string
      */
     protected $orderType;
 
     /**
-     * Order volume in lots
+     * Order volume in lots.
      *
      * @var float
      */
     protected $volume;
 
     /**
-     * Asset pair
+     * Asset pair.
      *
      * @var string
      */
     protected $pair;
 
     /**
-     * Price (Optional. Dependent upon ordertype)
+     * Price (Optional. Dependent upon ordertype).
      *
      * @var float
      */
     protected $price;
 
     /**
-     * Secondary price (Optional. Dependent upon ordertype)
+     * Secondary price (Optional. Dependent upon ordertype).
      *
      * @var float
      */
     protected $secondPrice;
 
     /**
-     * Amount of leverage desired (Optional)
+     * Amount of leverage desired (Optional).
      *
      * @var string
      */
     protected $leverage;
 
     /**
-     * Comma delimited list of order flags (Optional)
+     * Comma delimited list of order flags (Optional).
      *
      * @var array
      */
     protected $flags = [];
 
     /**
-     * Scheduled start time (Optional)
+     * Scheduled start time (Optional).
      *
      * @var Carbon
      */
     protected $startTime;
 
     /**
-     * Expiration time (Optional)
+     * Expiration time (Optional).
      *
      * @var Carbon
      */
     protected $expireTime;
 
     /**
-     * User reference id. 32-bit signed number. (Optional)
+     * User reference id. 32-bit signed number. (Optional).
+     *
      * @var string
      */
     protected $userRef;
 
     /**
-     * @param string $pair Asset pair
-     * @param string $type Type of order (buy/sell)
+     * @param string $pair      Asset pair
+     * @param string $type      Type of order (buy/sell)
      * @param string $orderType Order type
-     * @param float $volume Order volume in lots
+     * @param float  $volume    Order volume in lots
      */
     public function __construct(string $pair, string $type, string $orderType, float $volume)
     {
@@ -98,9 +99,7 @@ class Order implements OrderContract
     }
 
     /**
-     * Set the price
-     *
-     * @param float $price
+     * Set the price.
      */
     public function setPrice(float $price): void
     {
@@ -108,50 +107,33 @@ class Order implements OrderContract
     }
 
     /**
-     * Set the second price
-     *
-     * @param float $secondPrice
+     * Set the second price.
      */
     public function setSecondPrice(float $secondPrice): void
     {
         $this->secondPrice = $secondPrice;
     }
 
-    /**
-     * @param string $leverage
-     */
     public function setLeverage(string $leverage): void
     {
         $this->leverage = $leverage;
     }
 
-    /**
-     * @param array $flags
-     */
     public function setFlags(array $flags): void
     {
         $this->flags = $flags;
     }
 
-    /**
-     * @param Carbon $startTime
-     */
     public function setStartTime(Carbon $startTime): void
     {
         $this->startTime = $startTime;
     }
 
-    /**
-     * @param Carbon $expireTime
-     */
     public function setExpireTime(Carbon $expireTime): void
     {
         $this->expireTime = $expireTime;
     }
 
-    /**
-     * @param string $userRef
-     */
     public function setUserRef(string $userRef): void
     {
         $this->userRef = $userRef;
@@ -198,7 +180,6 @@ class Order implements OrderContract
         if ($this->userRef) {
             $parameters['userref'] = $this->userRef;
         }
-
 
         return $parameters;
     }

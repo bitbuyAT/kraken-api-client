@@ -1,6 +1,6 @@
 <?php
 
-namespace Butschster\Kraken\Objects;
+namespace bitbuyAT\Kraken\Objects;
 
 use Illuminate\Support\Arr;
 
@@ -16,26 +16,20 @@ class Ticker
      */
     protected $pair;
 
-    /**
-     * @param string $pair
-     * @param array $data
-     */
     public function __construct(string $pair, array $data)
     {
         $this->data = $data;
         $this->pair = $pair;
     }
 
-    /**
-     * @return string
-     */
     public function pair(): string
     {
         return $this->pair;
     }
 
     /**
-     * Ask price
+     * Ask price.
+     *
      * @return mixed
      */
     public function askPrice(): float
@@ -44,7 +38,8 @@ class Ticker
     }
 
     /**
-     * Ask whole lot volume
+     * Ask whole lot volume.
+     *
      * @return mixed
      */
     public function askWholeLotVolume(): float
@@ -53,7 +48,8 @@ class Ticker
     }
 
     /**
-     * Ask lot volume
+     * Ask lot volume.
+     *
      * @return mixed
      */
     public function askLotVolume(): float
@@ -62,7 +58,8 @@ class Ticker
     }
 
     /**
-     * Bid price
+     * Bid price.
+     *
      * @return mixed
      */
     public function bidPrice(): float
@@ -71,7 +68,8 @@ class Ticker
     }
 
     /**
-     * Bid whole lot volume
+     * Bid whole lot volume.
+     *
      * @return mixed
      */
     public function bidWholeLotVolume(): float
@@ -80,7 +78,8 @@ class Ticker
     }
 
     /**
-     * Bid lot volume
+     * Bid lot volume.
+     *
      * @return mixed
      */
     public function bidLotVolume(): float
@@ -89,9 +88,7 @@ class Ticker
     }
 
     /**
-     * Last trade closed price
-     *
-     * @return float
+     * Last trade closed price.
      */
     public function lastClosedPrice(): float
     {
@@ -99,9 +96,7 @@ class Ticker
     }
 
     /**
-     * Last trade closed price
-     *
-     * @return float
+     * Last trade closed price.
      */
     public function lastLotVolume(): float
     {
@@ -109,9 +104,7 @@ class Ticker
     }
 
     /**
-     * Today volume
-     *
-     * @return float
+     * Today volume.
      */
     public function volumeToday(): float
     {
@@ -119,9 +112,7 @@ class Ticker
     }
 
     /**
-     * Last 24 hours volume
-     *
-     * @return float
+     * Last 24 hours volume.
      */
     public function volumePrevious(): float
     {
@@ -129,9 +120,7 @@ class Ticker
     }
 
     /**
-     * Today volume weighted average price
-     *
-     * @return float
+     * Today volume weighted average price.
      */
     public function avgPriceVolumeToday(): float
     {
@@ -139,9 +128,7 @@ class Ticker
     }
 
     /**
-     * Last 24 volume weighted average price
-     *
-     * @return float
+     * Last 24 volume weighted average price.
      */
     public function avgPriceVolumPrevious(): float
     {

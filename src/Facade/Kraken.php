@@ -1,8 +1,8 @@
 <?php
 
-namespace Butschster\Kraken\Facade;
+namespace bitbuyAT\Kraken\Facade;
 
-use Butschster\Kraken\Contracts\Client;
+use bitbuyAT\Kraken\Contracts\Client;
 use Illuminate\Support\Facades\Facade;
 
 class Kraken extends Facade

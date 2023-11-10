@@ -1,6 +1,6 @@
 <?php
 
-namespace Butschster\Kraken;
+namespace bitbuyAT\Kraken;
 
 use GuzzleHttp\Client as HttpClient;
 use Illuminate\Support\ServiceProvider;
@@ -24,7 +24,7 @@ class KrakenServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $configPath = __DIR__ . '/../config/kraken.php';
+        $configPath = __DIR__.'/../config/kraken.php';
         $this->mergeConfigFrom($configPath, 'kraken');
     }
 

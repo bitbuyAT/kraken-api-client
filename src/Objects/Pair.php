@@ -1,6 +1,6 @@
 <?php
 
-namespace Butschster\Kraken\Objects;
+namespace bitbuyAT\Kraken\Objects;
 
 class Pair
 {
@@ -14,10 +14,6 @@ class Pair
      */
     protected $information;
 
-    /**
-     * @param string $pair
-     * @param array $information
-     */
     public function __construct(string $pair, array $information)
     {
         $this->pair = $pair;
@@ -25,9 +21,7 @@ class Pair
     }
 
     /**
-     * Pair name
-     *
-     * @return string
+     * Pair name.
      */
     public function name(): string
     {
@@ -35,9 +29,7 @@ class Pair
     }
 
     /**
-     * Alternate pair name
-     *
-     * @return string
+     * Alternate pair name.
      */
     public function altname(): string
     {
@@ -45,9 +37,7 @@ class Pair
     }
 
     /**
-     * Asset id of base component
-     *
-     * @return string
+     * Asset id of base component.
      */
     public function base(): string
     {
@@ -55,8 +45,7 @@ class Pair
     }
 
     /**
-     * Asset id of quote component
-     * @return string
+     * Asset id of quote component.
      */
     public function quote(): string
     {
@@ -64,9 +53,7 @@ class Pair
     }
 
     /**
-     * Volume lot size
-     *
-     * @return string
+     * Volume lot size.
      */
     public function lot(): string
     {

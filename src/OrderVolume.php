@@ -1,18 +1,15 @@
 <?php
 
-namespace Butschster\Kraken;
+namespace bitbuyAT\Kraken;
 
-use Butschster\Kraken\Exceptions\MinimalVolumeSizeNotFound;
-use Butschster\Kraken\Objects\Pair;
+use bitbuyAT\Kraken\Exceptions\MinimalVolumeSizeNotFound;
+use bitbuyAT\Kraken\Objects\Pair;
 
 class OrderVolume
 {
     /**
-     * Check minimal volume size for selected pair
+     * Check minimal volume size for selected pair.
      *
-     * @param Pair $pair
-     * @param float $volume
-     * @return bool
      * @throws MinimalVolumeSizeNotFound
      */
     public function checkMinimalSizeForPair(Pair $pair, float $volume): bool
@@ -21,11 +18,8 @@ class OrderVolume
     }
 
     /**
-     * Check minimal volume size for selected currency
+     * Check minimal volume size for selected currency.
      *
-     * @param string $currency
-     * @param float $volume
-     * @return bool
      * @throws MinimalVolumeSizeNotFound
      */
     public function checkMinimalSize(string $currency, float $volume): bool
@@ -34,10 +28,8 @@ class OrderVolume
     }
 
     /**
-     * Get minimal volume size for selected pair
+     * Get minimal volume size for selected pair.
      *
-     * @param Pair $pair
-     * @return mixed
      * @throws MinimalVolumeSizeNotFound
      */
     public function getMinimalSizeForPair(Pair $pair)
@@ -46,10 +38,8 @@ class OrderVolume
     }
 
     /**
-     * Get minimal volume size for selected currency
+     * Get minimal volume size for selected currency.
      *
-     * @param string $currency
-     * @return mixed
      * @throws MinimalVolumeSizeNotFound
      */
     public function getMinimalSize(string $currency)

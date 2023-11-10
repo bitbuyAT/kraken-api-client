@@ -1,6 +1,6 @@
 <?php
 
-namespace Butschster\Kraken\Objects;
+namespace bitbuyAT\Kraken\Objects;
 
 class OrderStatusDescription
 {
@@ -14,10 +14,6 @@ class OrderStatusDescription
      */
     protected $close;
 
-    /**
-     * @param string $order
-     * @param string|null $close
-     */
     public function __construct(string $order, string $close = null)
     {
         $this->order = $order;

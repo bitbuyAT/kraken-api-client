@@ -1,7 +1,7 @@
 {
-  "name": "butschster/kraken-api-client",
+  "name": "bitbuy-at/kraken-api-client",
   "type": "library",
-  "description": "PHP Api Client for Kraken.com",
+  "description": "Client for Kraken.com REST API with support for Laravel", 
   "keywords": [
     "kraken",
     "api",
@@ -11,36 +11,44 @@
   "license": "MIT",
   "authors": [
     {
+      "name": "bitbuy GmbH",
+      "email": "office@bitbuy.at"
+    },
+    {
+      "name": "Emanuel Sanchez de la Cerda",
+      "email": "emanuel.sdlc@gmail.com"
+    },
+    {
       "name": "Pavel Buchnev",
       "email": "butschster@gmail.com"
     }
   ],
   "require": {
-    "php": ">=7.1.3",
-    "guzzlehttp/guzzle": "^6|^7",
+    "php": "^8.0",
+    "guzzlehttp/guzzle": "^7.0",
     "nesbot/carbon": "^2.16",
-    "illuminate/support": "~5.4|^6|^7|^8"
+    "illuminate/support": "^8 || ^9 || ^10"
   },
   "require-dev": {
-    "phpunit/phpunit": "~7.0"
+    "phpunit/phpunit": "^9"
   },
   "autoload": {
     "psr-4": {
-      "Butschster\\Kraken\\": "src/"
+      "bitbuyAT\\Kraken\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Kraken\\Tests\\": "tests/"
+      "bitbuyAT\\Kraken\\": "tests/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Butschster\\Kraken\\KrakenServiceProvider"
+        "bitbuyAT\\Kraken\\KrakenServiceProvider"
       ],
       "aliases": {
-        "Kraken": "Butschster\\Kraken\\Facade\\Kraken"
+        "Kraken": "bitbuyAT\\Kraken\\Facade\\Kraken"
       }
     }
   }

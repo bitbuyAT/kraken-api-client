@@ -1,10 +1,7 @@
 <?php
 
-namespace Butschster\Kraken\Exceptions;
+namespace bitbuyAT\Kraken\Exceptions;
 
-use Exception;
-
-class KrakenApiErrorException extends Exception
+class KrakenApiErrorException extends \Exception
 {
-    //
 }

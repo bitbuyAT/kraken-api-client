@@ -1,6 +1,6 @@
 <?php
 
-namespace Butschster\Kraken\Objects;
+namespace bitbuyAT\Kraken\Objects;
 
 class OrderStatus
 {
@@ -14,10 +14,6 @@ class OrderStatus
      */
     protected $description;
 
-    /**
-     * @param string $transactionId
-     * @param array $descriptions
-     */
     public function __construct(string $transactionId, array $descriptions = [])
     {
         $this->transactionId = $transactionId;
@@ -28,17 +24,11 @@ class OrderStatus
         );
     }
 
-    /**
-     * @return string
-     */
     public function getTransactionId(): string
     {
         return $this->transactionId;
     }
 
-    /**
-     * @return OrderStatusDescription
-     */
     public function getDescription(): OrderStatusDescription
     {
         return $this->description;
